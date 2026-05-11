@@ -43,7 +43,7 @@ This project follows a complete data analysis pipeline **entirely within Snowfla
 2. **Python in Snowflake** — Run statistical tests using Snowflake's integrated Python notebooks
 3. **Tableau** — Create interactive dashboards to visualize and communicate the findings
 
-Rather than just comparing numbers, we used proper statistical methods to ensure the decision is backed by solid evidence.
+Rather than just comparing numbers, i used proper statistical methods to ensure the decision is backed by solid evidence.
 
 All data processing and analysis was done in Snowflake, showcasing the platform's ability to handle both SQL and Python workloads seamlessly.
 
@@ -163,7 +163,7 @@ The first step was loading the data into Snowflake and using SQL to explore it f
 
 ### Step 2: Statistical Testing in Python (Snowflake Notebooks)
 
-After exploring the data with SQL, we used **Python within Snowflake** to answer the critical question: **"Is this difference real, or could it just be random luck?"**
+After exploring the data with SQL, used **Python within Snowflake** to answer the critical question: **"Is this difference real, or could it just be random luck?"**
 
 Snowflake's integrated Python notebooks allowed us to run statistical tests directly in the same environment as our data, eliminating the need to export data or switch platforms.
 
@@ -194,7 +194,7 @@ There is virtually zero chance this difference happened by random luck. The new 
 | **Difference** | **+8.67pp** | **7.04pp – 10.30pp** |
 
 **What This Means:**  
-We're 95% confident that Group B's true conversion rate is between 12.75% and 15.49%. Even in the worst-case scenario (12.75%), it still beats Group A's best case (6.35%). The intervals don't overlap at all, which strongly confirms Group B is superior.
+Group B’s true conversion rate is estimated to be between 12.75% and 15.49% with 95% confidence. Even at the lower bound (12.75%), it still exceeds Group A’s upper bound (6.35%). Since the confidence intervals do not overlap, the results strongly indicate that Group B performs better.
 
 ---
 
@@ -360,8 +360,6 @@ Assuming an average order value of **$50 per conversion**:
 
 ### ✅ IMPLEMENT GROUP B (NEW DESIGN)
 
-This is one of the clearest A/B test results you could ask for. Here's why:
-
 ---
 
 #### 1. Massive Conversion Improvement
@@ -427,21 +425,21 @@ The evidence is overwhelming. This is a clear, data-driven decision with minimal
 ## How to Run This Project
 
 #### 1. Set up Snowflake
-- Create a free Snowflake trial account at snowflake.com
-- Run the queries in `sql/ab_testing_analysis.sql`
-- Load `data/ab_testing.csv` using Snowflake's Load Data UI
+Create a free Snowflake trial account at snowflake.com
+Run the queries in `sql/ab_testing_analysis.sql`
+Load `data/ab_testing.csv` using Snowflake's Load Data UI
 
 #### 2. Load the Data
-- Upload `ab_testing.csv` to your Snowflake table
-- Verify with `SELECT * FROM ab_test_results LIMIT 10;`
+Upload `ab_testing.csv` to your Snowflake table
+Verify with `SELECT * FROM ab_test_results LIMIT 10;`
 
 #### 3. Run Python Statistical Analysis in Snowflake
 
 **Option A: Using Snowflake Notebooks (Recommended)**
-- In Snowflake, navigate to Projects → Notebooks
-- Create a new Python notebook
-- Copy the code from `notebooks/ab_testing_statistical_analysis.ipynb`
-- Run the cells directly in Snowflake
+In Snowflake, navigate to Projects → Notebooks
+Create a new Python notebook
+Copy the code from `notebooks/ab_testing_statistical_analysis.ipynb`
+Run the cells directly in Snowflake
 
 **Option B: Using Local Jupyter Notebook**
 ```bash
